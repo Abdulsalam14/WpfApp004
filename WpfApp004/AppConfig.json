@@ -1,0 +1,5 @@
+﻿{
+  "ConnectionStrings": {
+    "Connection1": "Server=(localdb)\\MSSQLLocalDB;Database=Library;Integrated Security=True;"
+  }
+}

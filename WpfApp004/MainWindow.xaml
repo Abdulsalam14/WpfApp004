@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApp004.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp004"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="7*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Canvas Margin="10">
+            <ComboBox Name="combobox1" Canvas.Left="20" Width="300" Canvas.Bottom="15"  ItemsSource="{Binding list}" SelectionChanged="combobox1_SelectionChanged"></ComboBox>
+            <ComboBox Name="combobox2" Canvas.Right="20" Width="300" Canvas.Bottom="15" ItemsSource="{Binding list2}" SelectionChanged="combobox2_SelectionChanged" ></ComboBox>
+        </Canvas>
+        <ListView Grid.Row="1" Margin="20,10" ItemsSource="{Binding Books}" Name="listvv">
+            <ListView.View>
+                <GridView  >
+                    <GridViewColumn Header="BookId" DisplayMemberBinding="{Binding Id}" ></GridViewColumn>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
+                    <GridViewColumn Header="YearPress" DisplayMemberBinding="{Binding YearPress}"></GridViewColumn>
+                    <GridViewColumn Header="IdThemes" DisplayMemberBinding="{Binding IdThemes}" ></GridViewColumn>
+                    <GridViewColumn Header="IdCategory" DisplayMemberBinding="{Binding IdCategory}" ></GridViewColumn>
+                    <GridViewColumn Header="IdAuthor" DisplayMemberBinding="{Binding IdAuthor}"></GridViewColumn>
+                    <GridViewColumn Header="Idpress" DisplayMemberBinding="{Binding IdPress}"></GridViewColumn>
+                    <GridViewColumn Header="Comment" DisplayMemberBinding="{Binding Comment}"></GridViewColumn>
+                    <GridViewColumn Header="Quantity" DisplayMemberBinding="{Binding Quantity}"></GridViewColumn>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
